@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "typescript-mode" "typescript-mode.el" (23626
-;;;;;;  1233 131038 137000))
+;;;### (autoloads nil "typescript-mode" "typescript-mode.el" (23633
+;;;;;;  5444 822867 576000))
 ;;; Generated autoloads from typescript-mode.el
 (put 'typescript-indent-level 'safe-local-variable #'integerp)
 
@@ -24,7 +24,7 @@ Key bindings:
 ;;;***
 
 ;;;### (autoloads nil nil ("typescript-mode-pkg.el" "typescript-mode-test-utilities.el")
-;;;;;;  (23626 1233 127038 12000))
+;;;;;;  (23633 5444 818867 467000))
 
 ;;;***
 

@@ -1,0 +1,154 @@
+* Python Project Structure
+** Packages and Modules
+*** Package: 
+    - Can be viewed as folder
+    - need to add a special file ~__init__.py~, which can be empty
+    - the name of ~__init__.py~ is the name of the package
+    - ~__pycache__~ folder contains .pyc files which are compiled codes
+
+*** Module:
+    - Can be viewed as files in a folder
+*** Class
+**** Functions and Variables
+     - Functions and variables belong to class
+*** import
+    - change to a new line, use ~\~
+    - can also use ~()~
+ #+BEGIN_SRC python
+from numpy import random.random.rand, random.exponential, \
+    random.normal
+
+# alternatively
+
+from numpy import (random.random.rand, random.exponential,
+                   random.normal)
+ #+END_SRC
+
+*** init file
+    - when a module is imported, init is the first file to run
+    - put all the commonly used modules in the ~__init__.py~ file
+    - modules won't be imported repetitively
+    - try to avoid import loops
+
+** Function
+*** Parameters & Arguments
+**** Parameters 
+     - defined in function
+     - A named entity in a function (or method) definition that specifies an argument (or in some cases, arguments) that the function can accept.
+**** Arguments 
+     - specific in revoking function
+     - A value passed to a function (or method) when calling the function.
+**** keyword parameters
+**** default parameters
+     - assign default values to parameters
+     - order should be required parameters first then default parameters
+**** var parameters: *args
+     - ~*params~
+     - tuple
+**** var keyword parameters: **kwargs
+     - ~**kwargs~
+     - dictionary
+
+**** orders of parameters
+     - required, default, varialbe
+
+**** domain of variables
+     - global var
+     - regional var
+     - chain of domain: local var > regional var > global var
+
+** Class
+
+*** Class
+    - 类最基本的作用是封装
+    - 类是用来定义，不负责运行
+    - 一个模块定义类，在另外一个模块内运行类
+*** OOP
+    - class = oop
+    - class
+    - object
+
+*** What can be included in a class
+    - variables
+    - method
+  
+*** Instantiate
+    - to use a class, need to instantiate it first
+    - method has one default parameter: self
+    - to refer a varialbe in class, use self.var
+
+*** Difference between function and method
+    - the difference is blurring now
+    - method: is on the design level, object oriented
+    - function: is for running program, a process name, process oriented
+    - 没有必要特别区分方法和函数
+
+*** class and object
+
+**** class
+     - 类是现实世界或思维世界中的实体在计算机中的反映
+     - 它将数据以及这些数据上的操作封装在一起
+     - 
+
+**** object
+     - 类是抽象的
+     - 类被实例化后就变成对象
+     - 类是模板可以产生各种各样的具体的对象
+
+*** init function
+    - ~__init__()~ will be called automatically after initiate the class
+    - initialize object attributes: self.att=arg
+
+*** 类变量 vs 实例变量
+    - 类变量
+    - 实例变量赋值用self.var
+    - 先查找实例变量，如果没有找到就找类变量
+
+*** self与实例方法
+    - self代表的是实例
+    - 在实例方法中访问类变量用self.var
+
+*** class method
+    - @classmethod
+
+*** static method
+    - @staticmethod
+    - there's no default parameter
+    - 和普通的函数很近，与类的关联相对类方法而言更弱
+    - classmethod 与 staticmethod 不能访问实例变量
+
+*** visibility
+    - don't change class attr directly
+    - define an instance method and change it in the method
+    - public
+    - private: can define class elements as private by adding ~__methodName~
+    - secret method can be defined as ~~__methodName__~~
+
+*** Three features of OOP
+
+**** Inheritance
+
+**** Encapsulation of data
+
+**** Polymorphism
+     - property of an object to take another object properties (includes overloading and overriding methods)
+
+*** Inheritance
+    - python can have multi-inheritance
+    - children class method is prioritized if children class method has the same name as parent class method name
+
+** Advanced
+
+*** enumeration
+#+BEGIN_SRC ipython :session :exports both :results raw drawer
+from enum import Enum
+
+class VIP(Enum):
+    YELLOW, GREEN, BLACK, RED = 1, 2, 3, 4
+
+VIP.YELLOW
+#+END_SRC
+
+#+BEGIN_SRC ipython :session :exports both :results raw drawer
+import numpy as np
+#+END_SRC

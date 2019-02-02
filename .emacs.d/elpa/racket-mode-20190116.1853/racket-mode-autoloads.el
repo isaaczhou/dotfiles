@@ -4,7 +4,7 @@
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "racket-bug-report" "racket-bug-report.el"
-;;;;;;  (23626 1225 805809 201000))
+;;;;;;  (23633 5436 930762 381000))
 ;;; Generated autoloads from racket-bug-report.el
 
 (autoload 'racket-bug-report "racket-bug-report" "\
@@ -14,8 +14,8 @@ Fill a buffer with data to make a racket-mode bug report.
 
 ;;;***
 
-;;;### (autoloads nil "racket-debug" "racket-debug.el" (23626 1226
-;;;;;;  54816 983000))
+;;;### (autoloads nil "racket-debug" "racket-debug.el" (23633 5437
+;;;;;;  206763 822000))
 ;;; Generated autoloads from racket-debug.el
 
 (autoload 'racket--debug-send-definition "racket-debug" "\
@@ -30,16 +30,16 @@ Fill a buffer with data to make a racket-mode bug report.
 
 ;;;***
 
-;;;### (autoloads nil "racket-edit" "racket-edit.el" (23626 1225
-;;;;;;  774808 231000))
+;;;### (autoloads nil "racket-edit" "racket-edit.el" (23633 5436
+;;;;;;  906762 255000))
 ;;; Generated autoloads from racket-edit.el
 
 (add-to-list 'hs-special-modes-alist '(racket-mode "(" ")" ";" nil nil))
 
 ;;;***
 
-;;;### (autoloads nil "racket-mode" "racket-mode.el" (23626 1226
-;;;;;;  41816 576000))
+;;;### (autoloads nil "racket-mode" "racket-mode.el" (23633 5437
+;;;;;;  194763 760000))
 ;;; Generated autoloads from racket-mode.el
 
 (autoload 'racket-mode "racket-mode" "\
@@ -81,8 +81,8 @@ If you run this command, _ever_, you should run it _again_ after:
 
 ;;;***
 
-;;;### (autoloads nil "racket-repl" "racket-repl.el" (23626 1226
-;;;;;;  60817 170000))
+;;;### (autoloads nil "racket-repl" "racket-repl.el" (23633 5437
+;;;;;;  210763 843000))
 ;;; Generated autoloads from racket-repl.el
 
 (autoload 'racket-repl "racket-repl" "\
@@ -101,7 +101,7 @@ Commands that don't want the REPL to be displayed can instead use
 ;;;***
 
 ;;;### (autoloads nil "racket-unicode-input-method" "racket-unicode-input-method.el"
-;;;;;;  (23626 1225 809809 325000))
+;;;;;;  (23633 5436 934762 401000))
 ;;; Generated autoloads from racket-unicode-input-method.el
 
 (autoload 'racket-unicode-input-method-enable "racket-unicode-input-method" "\
@@ -153,7 +153,7 @@ can turn it off by setting `input-method-highlight-flag' to nil via
 ;;;;;;  "racket-imenu.el" "racket-indent.el" "racket-keywords-and-builtins.el"
 ;;;;;;  "racket-logger.el" "racket-make-doc.el" "racket-mode-pkg.el"
 ;;;;;;  "racket-ppss.el" "racket-profile.el" "racket-stepper.el"
-;;;;;;  "racket-util.el") (23626 1226 87818 14000))
+;;;;;;  "racket-util.el") (23633 5437 250764 51000))
 
 ;;;***
 

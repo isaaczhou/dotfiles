@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "visual-regexp" "visual-regexp.el" (23626 1233
-;;;;;;  607053 14000))
+;;;### (autoloads nil "visual-regexp" "visual-regexp.el" (23633 5445
+;;;;;;  626889 564000))
 ;;; Generated autoloads from visual-regexp.el
 
 (autoload 'vr/mc-mark "visual-regexp" "\

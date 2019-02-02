@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "android-mode" "android-mode.el" (23626 1185
-;;;;;;  15534 373000))
+;;;### (autoloads nil "android-mode" "android-mode.el" (23633 5377
+;;;;;;  522452 187000))
 ;;; Generated autoloads from android-mode.el
 
 (autoload 'android-mode "android-mode" "\

@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "xquery-mode" "xquery-mode.el" (23626 1242
-;;;;;;  869342 491000))
+;;;### (autoloads nil "xquery-mode" "xquery-mode.el" (23633 5455
+;;;;;;  459156 504000))
 ;;; Generated autoloads from xquery-mode.el
 
 (autoload 'xquery-mode "xquery-mode" "\

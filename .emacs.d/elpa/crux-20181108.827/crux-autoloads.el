@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "crux" "crux.el" (23626 1257 329794 427000))
+;;;### (autoloads nil "crux" "crux.el" (23633 5476 983728 253000))
 ;;; Generated autoloads from crux.el
 
 (autoload 'crux-open-with "crux" "\
@@ -249,10 +249,6 @@ skip typos you don't want to fix with `SPC', and you can
 abort completely with `C-g'.
 
 \(fn P)" t nil)
-
-;;;***
-
-;;;### (autoloads nil nil ("crux-pkg.el") (23626 1256 234760 203000))
 
 ;;;***
 

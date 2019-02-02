@@ -1,0 +1,2 @@
+import demo.package2.package4.m2
+print(__package__)

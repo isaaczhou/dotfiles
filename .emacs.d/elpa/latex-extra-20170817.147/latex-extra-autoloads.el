@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "latex-extra" "latex-extra.el" (23626 1255
-;;;;;;  440735 386000))
+;;;### (autoloads nil "latex-extra" "latex-extra.el" (23633 5474
+;;;;;;  707668 593000))
 ;;; Generated autoloads from latex-extra.el
 
 (autoload 'latex/setup-auto-fill "latex-extra" "\
@@ -84,11 +84,6 @@ It also defines a new command:
     3. Indenting everything.
 
 \(fn &optional ARG)" t nil)
-
-;;;***
-
-;;;### (autoloads nil nil ("latex-extra-pkg.el") (23626 1254 672711
-;;;;;;  384000))
 
 ;;;***
 

@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "dash-at-point" "dash-at-point.el" (23626 1186
-;;;;;;  93568 65000))
+;;;### (autoloads nil "dash-at-point" "dash-at-point.el" (23633 5378
+;;;;;;  858459 163000))
 ;;; Generated autoloads from dash-at-point.el
 
 (let ((loads (get 'dash-at-point 'custom-loads))) (if (member '"dash-at-point" loads) nil (put 'dash-at-point 'custom-loads (cons '"dash-at-point" loads))))

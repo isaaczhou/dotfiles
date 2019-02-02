@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "smartscan" "smartscan.el" (23626 1232 40004
-;;;;;;  39000))
+;;;### (autoloads nil "smartscan" "smartscan.el" (23633 5443 62819
+;;;;;;  410000))
 ;;; Generated autoloads from smartscan.el
 
 (autoload 'smartscan-symbol-go-forward "smartscan" "\

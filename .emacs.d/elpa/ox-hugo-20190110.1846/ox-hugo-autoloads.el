@@ -4,7 +4,7 @@
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "org-hugo-auto-export-mode" "org-hugo-auto-export-mode.el"
-;;;;;;  (23626 1347 508612 806000))
+;;;;;;  (23633 5511 204603 73000))
 ;;; Generated autoloads from org-hugo-auto-export-mode.el
 
 (autoload 'org-hugo-auto-export-mode "org-hugo-auto-export-mode" "\
@@ -14,8 +14,8 @@ Toggle auto exporting the Org file using `ox-hugo'.
 
 ;;;***
 
-;;;### (autoloads nil "ox-blackfriday" "ox-blackfriday.el" (23626
-;;;;;;  1347 513612 962000))
+;;;### (autoloads nil "ox-blackfriday" "ox-blackfriday.el" (23633
+;;;;;;  5511 208603 173000))
 ;;; Generated autoloads from ox-blackfriday.el
 
 (autoload 'org-blackfriday-export-as-markdown "ox-blackfriday" "\
@@ -89,7 +89,7 @@ Return output file name.
 
 ;;;***
 
-;;;### (autoloads nil "ox-hugo" "ox-hugo.el" (23626 1347 518613 118000))
+;;;### (autoloads nil "ox-hugo" "ox-hugo.el" (23633 5511 216603 373000))
 ;;; Generated autoloads from ox-hugo.el
  (put 'org-hugo-section 'safe-local-variable 'stringp)
  (put 'org-hugo-front-matter-format 'safe-local-variable 'stringp)
@@ -244,7 +244,7 @@ buffer and returned as a string in Org format.
 ;;;***
 
 ;;;### (autoloads nil nil ("ox-hugo-auto-export.el" "ox-hugo-pandoc-cite.el"
-;;;;;;  "ox-hugo-pkg.el") (23626 1347 535613 649000))
+;;;;;;  "ox-hugo-pkg.el") (23633 5511 232603 772000))
 
 ;;;***
 

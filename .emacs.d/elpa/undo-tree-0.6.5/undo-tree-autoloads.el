@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "undo-tree" "undo-tree.el" (23626 1256 644773
-;;;;;;  12000))
+;;;### (autoloads nil "undo-tree" "undo-tree.el" (23633 5476 167706
+;;;;;;  886000))
 ;;; Generated autoloads from undo-tree.el
 
 (autoload 'undo-tree-mode "undo-tree" "\
@@ -48,11 +48,6 @@ Undo-Tree mode is enabled in all buffers where
 See `undo-tree-mode' for more information on Undo-Tree mode.
 
 \(fn &optional ARG)" t nil)
-
-;;;***
-
-;;;### (autoloads nil nil ("undo-tree-pkg.el") (23626 1255 556739
-;;;;;;  13000))
 
 ;;;***
 

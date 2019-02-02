@@ -4,24 +4,6 @@
 
 (global-set-key (kbd "C-x e") 'iz/visit-emacs-config)
 
-(defun iz/visit-blog-config ()
-  (interactive)
-  (find-file "~/Dropbox/BlogHugo"))
-
-(global-set-key (kbd "C-x q") 'iz/visit-blog-config)
-
-(defun iz/visit-worklog-config ()
-  (interactive)
-  (find-file "~/Dropbox/worklogs/2017WorkLog.org"))
-
-(global-set-key (kbd "C-x w") 'iz/visit-worklog-config)
-
-(defun iz/visit-dropbox ()
-  (interactive)
-  (find-file "~/Dropbox"))
-
-(global-set-key (kbd "C-x r") 'iz/visit-dropbox)
-
 (setq user-full-name "Isaac Zhou"
       user-mail-address "isaaczhou85@gmail.com"
       calendar-latitude 40.7
@@ -73,7 +55,7 @@
 (bind-key "<f8>" 'disable-active-themes)
 
 (when (window-system)
-    (set-default-font "Source Code Pro Light 20"))
+    (set-default-font "Fira Code Light 15"))
 
 ;; These functions are useful. Activate them.
 (put 'downcase-region 'disabled nil)
@@ -139,83 +121,6 @@
 
 (use-package page-break-lines
   :ensure t)
-
-(when (string-equal system-type "darwin")
-  ;; delete files by moving them to the trash
-  (setq delete-by-moving-to-trash t)
-  (setq trash-directory "~/.Trash")
-
-  ;; Don't make new frames when opening a new file with Emacs
-  (setq ns-pop-up-frames nil)
-
-  ;; set the Fn key as the hyper key
-  (setq ns-function-modifier 'hyper)
-
-  ;; Use Command-` to switch between Emacs windows (not frames)
-  (bind-key "s-`" 'other-window)
-  
-  ;; Use Command-Shift-` to switch Emacs frames in reverse
-  (bind-key "s-~" (lambda() () (interactive) (other-window -1)))
-
-  ;; Because of the keybindings above, set one for `other-frame'
-  (bind-key "s-1" 'other-frame)
-
-  ;; Fullscreen!
-  (setq ns-use-native-fullscreen nil) ; Not Lion style
-  (bind-key "<s-return>" 'toggle-frame-fullscreen)
-
-  ;; buffer switching
-  (bind-key "s-{" 'previous-buffer)
-  (bind-key "s-}" 'next-buffer)
-
-  ;; Compiling
-  (bind-key "H-c" 'compile)
-  (bind-key "H-r" 'recompile)
-  (bind-key "H-s" (defun save-and-recompile () (interactive) (save-buffer) (recompile)))
-
-  ;; disable the key that minimizes emacs to the dock because I don't
-  ;; minimize my windows
-  ;; (global-unset-key (kbd "C-z"))
-
-  (defun open-dir-in-finder ()
-    "Open a new Finder window to the path of the current buffer"
-    (interactive)
-    (start-process "mai-open-dir-process" nil "open" "."))
-  (bind-key "C-c o f" 'open-dir-in-finder)
-
-  (defun open-dir-in-iterm ()
-    "Open the current directory of the buffer in iTerm."
-    (interactive)
-    (let* ((iterm-app-path "/Applications/iTerm.app")
-           (iterm-brew-path "/opt/homebrew-cask/Caskroom/iterm2/1.0.0/iTerm.app")
-           (iterm-path (if (file-directory-p iterm-app-path)
-                           iterm-app-path
-                         iterm-brew-path)))
-      (start-process "mai-open-dir-process" nil "open" "-a" iterm-path ".")))
-  (bind-key "C-c o t" 'open-dir-in-iterm)
-
-  ;; Not going to use these commands
-  (put 'ns-print-buffer 'disabled t)
-  (put 'suspend-frame 'disabled t))
-
-(use-package exec-path-from-shell
-  :if (memq window-system '(mac ns))
-  :ensure t
-  :init
-  (exec-path-from-shell-initialize))
-
-(let* ((cmd "sw_vers -productVersion")
-       (macos-version (string-to-int
-                     (cadr (split-string
-                            (shell-command-to-string cmd)
-                            "\\."))))
-       (elcapitan-version 11))
-  (when (>= macos-version elcapitan-version)
-    (setq visible-bell nil)
-    (setq ring-bell-function 'ignore)
-
-    ;; El Capitan full screen animation is quick and delightful (enough to start using it).
-    (setq ns-use-native-fullscreen t)))
 
 ;; make ibuffer the default buffer lister.
 (defalias 'list-buffers 'ibuffer)
@@ -344,17 +249,6 @@
   :ensure t
   :bind ("H-t" . transpose-frame))
 
-;; (use-package ido
-;;   :init
-;;   (setq ido-enable-flex-matching t)
-;;   (setq ido-everywhere t)
-;;   (ido-mode t)
-;;   (use-package ido-vertical-mode
-;;     :ensure t
-;;     :defer t
-;;     :init (ido-vertical-mode 1)
-;;     (setq ido-vertical-define-keys 'C-n-and-C-p-only)))
-
 (use-package whitespace
   :bind ("s-<f10>" . whitespace-mode))
 
@@ -375,10 +269,6 @@
   (ace-window-display-mode)
   :bind ("s-o" . ace-window))
 
-(use-package android-mode
-  :ensure t
-  :defer t)
-
 (use-package c-eldoc
   :commands c-turn-on-eldoc-mode
   :ensure t
@@ -387,11 +277,6 @@
 (use-package clojure-mode
   :defer t
   :ensure t)
-
-(use-package dash-at-point
-  :ensure t
-  :bind (("s-D"     . dash-at-point)
-         ("C-c e"   . dash-at-point-with-docset)))
 
 ;; (require 'helm-config)
 ;; (setq helm-mode t)
@@ -505,6 +390,9 @@
   :defer t
   :ensure t)
 
+(setenv "WORKON_HOME" "/home/isaac/anaconda3/envs/")
+(pyvenv-mode 1)
+
 (use-package racket-mode
   :ensure t
   :commands racket-mode
@@ -580,13 +468,6 @@
   :ensure t
   :bind ("M-<f12>" . shell-pop))
 
-(use-package slime
-  :ensure t
-  :defer 10
-  :init
-  (setq inferior-lisp-program "/usr/local/bin/sbcl")
-  (add-to-list 'slime-contribs 'slime-fancy))
-
 (use-package quickrun
   :defer 10
   :ensure t
@@ -643,8 +524,6 @@
   :config
   (define-key doc-view-mode-map (kbd "<right>") 'doc-view-next-page)
   (define-key doc-view-mode-map (kbd "<left>") 'doc-view-previous-page))
-
-(setq mouse-wheel-scroll-amount (quote (0.01)))
 
 (use-package server
   :config

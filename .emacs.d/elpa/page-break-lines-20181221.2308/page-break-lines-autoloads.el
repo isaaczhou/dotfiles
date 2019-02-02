@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "page-break-lines" "page-break-lines.el" (23626
-;;;;;;  1158 120693 822000))
+;;;### (autoloads nil "page-break-lines" "page-break-lines.el" (23633
+;;;;;;  5288 697988 489000))
 ;;; Generated autoloads from page-break-lines.el
 
 (defvar page-break-lines-char 9472 "\
