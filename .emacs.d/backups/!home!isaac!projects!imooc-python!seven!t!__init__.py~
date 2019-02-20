@@ -1,2 +1,0 @@
-a = "this is __init__.py file"
-print(a)
