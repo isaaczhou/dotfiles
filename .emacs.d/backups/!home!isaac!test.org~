@@ -1,0 +1,4 @@
+#+BEGIN_SRC ipython :session :exports both :results raw drawer
+import numpy as np
+np.random.random(10)
+#+END_SRC
