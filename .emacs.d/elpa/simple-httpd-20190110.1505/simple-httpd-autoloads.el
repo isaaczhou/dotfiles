@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "simple-httpd" "simple-httpd.el" (23633 5393
-;;;;;;  598536 122000))
+;;;### (autoloads nil "simple-httpd" "simple-httpd.el" (23657 39302
+;;;;;;  105774 942000))
 ;;; Generated autoloads from simple-httpd.el
 
 (autoload 'httpd-start "simple-httpd" "\

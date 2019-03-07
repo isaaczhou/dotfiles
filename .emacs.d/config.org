@@ -139,7 +139,7 @@ Here's some configuration for [[https://github.com/bbatsov/solarized-emacs/][bba
 
 #+begin_src emacs-lisp
 (when (window-system)
-    (set-default-font "Fira Code Light 15"))
+    (set-default-font "Fira Code Light 18"))
 #+end_src
 
 * Sane defaults
@@ -814,7 +814,6 @@ Integrates with IPython.
 
 #+begin_src emacs-lisp
 (setenv "WORKON_HOME" "/home/isaac/anaconda3/envs/")
-(pyvenv-mode 1)
 #+end_src
 
 ** Racket
@@ -1088,13 +1087,13 @@ switch (number)
 Luckily, I can modify the way Emacs formats code with this configuration.
 
 #+begin_src emacs-lisp
-(defun my-c-mode-hook ()
-  (setq c-basic-offset 4)
-  (c-set-offset 'substatement-open 0)   ; Curly braces alignment
-  (c-set-offset 'case-label 4))         ; Switch case statements alignment
+;; (defun my-c-mode-hook ()
+;;   (setq c-basic-offset 4)
+;;   (c-set-offset 'substatement-open 0)   ; Curly braces alignment
+;;   (c-set-offset 'case-label 4))         ; Switch case statements alignment
 
-(add-hook 'c-mode-hook 'my-c-mode-hook)
-(add-hook 'java-mode-hook 'my-c-mode-hook)
+;; (add-hook 'c-mode-hook 'my-c-mode-hook)
+;; (add-hook 'java-mode-hook 'my-c-mode-hook)
 #+end_src
 
 ** Rust
@@ -1461,11 +1460,6 @@ I want to load snippets in orgmode
 #+end_src
 
 
-** exec-path-from-shell
-
-#+begin_src emacs-lisp
-(exec-path-from-shell-initialize)
-#+end_src
 
 #+begin_src emacs-lisp
 (defun set-exec-path-from-shell-PATH ()
@@ -1740,6 +1734,17 @@ Now I use RJSX, I don't need js2 mode
 
 (global-set-key [\M-\S-up] 'move-text-up)
 (global-set-key [\M-\S-down] 'move-text-down)
+#+end_src
+
+* Google C Style
+#+begin_src emacs-lisp
+;; Also works for Java.
+(autoload 'google-set-c-style "google-c-style")
+(autoload 'google-make-newline-indent "google-c-style")
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+(add-hook 'c-mode-hook 'google-set-c-style)
+(add-hook 'java-mode-hook 'google-set-c-style)
 #+end_src
 
 * turn off warning

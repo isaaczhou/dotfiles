@@ -1,1 +1,1 @@
-("~/projects/logs/" "~/.emacs.d/elpa/jedi-core-20181207.1/" "~/.emacs.d/elpa/auctex-12.1.1/" "~/.emacs.d/")
+("~/myprojects/logs/" "~/myprojects/data-structure/" "~/myprojects/primerpy/" "~/.emacs.d/")

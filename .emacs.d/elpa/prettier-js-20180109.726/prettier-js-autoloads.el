@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "prettier-js" "prettier-js.el" (23633 5552
-;;;;;;  533607 131000))
+;;;### (autoloads nil "prettier-js" "prettier-js.el" (23657 43315
+;;;;;;  184331 413000))
 ;;; Generated autoloads from prettier-js.el
 
 (autoload 'prettier-js-mode "prettier-js" "\

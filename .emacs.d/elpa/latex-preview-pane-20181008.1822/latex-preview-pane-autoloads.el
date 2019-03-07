@@ -4,7 +4,7 @@
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "latex-preview-pane" "latex-preview-pane.el"
-;;;;;;  (23633 5475 327684 865000))
+;;;;;;  (23657 43144 975269 413000))
 ;;; Generated autoloads from latex-preview-pane.el
 
 (autoload 'latex-preview-pane-enable "latex-preview-pane" "\
@@ -46,8 +46,8 @@ Toggle Latex Preview Pane Mode.
 
 ;;;***
 
-;;;### (autoloads nil nil ("latex-preview-pane-pkg.el") (23633 5475
-;;;;;;  319684 656000))
+;;;### (autoloads nil nil ("latex-preview-pane-pkg.el") (23657 43144
+;;;;;;  963263 414000))
 
 ;;;***
 

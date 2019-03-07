@@ -55,7 +55,7 @@
 (bind-key "<f8>" 'disable-active-themes)
 
 (when (window-system)
-    (set-default-font "Fira Code Light 15"))
+    (set-default-font "Fira Code Light 18"))
 
 ;; These functions are useful. Activate them.
 (put 'downcase-region 'disabled nil)
@@ -391,7 +391,6 @@
   :ensure t)
 
 (setenv "WORKON_HOME" "/home/isaac/anaconda3/envs/")
-(pyvenv-mode 1)
 
 (use-package racket-mode
   :ensure t
@@ -503,13 +502,13 @@
   :bind (("C-c o o" . crux-open-with)
          ("C-c u" . crux-view-url)))
 
-(defun my-c-mode-hook ()
-  (setq c-basic-offset 4)
-  (c-set-offset 'substatement-open 0)   ; Curly braces alignment
-  (c-set-offset 'case-label 4))         ; Switch case statements alignment
+;; (defun my-c-mode-hook ()
+;;   (setq c-basic-offset 4)
+;;   (c-set-offset 'substatement-open 0)   ; Curly braces alignment
+;;   (c-set-offset 'case-label 4))         ; Switch case statements alignment
 
-(add-hook 'c-mode-hook 'my-c-mode-hook)
-(add-hook 'java-mode-hook 'my-c-mode-hook)
+;; (add-hook 'c-mode-hook 'my-c-mode-hook)
+;; (add-hook 'java-mode-hook 'my-c-mode-hook)
 
 (use-package rust-mode
   :ensure t
@@ -814,8 +813,6 @@ May be necessary for some GUI environments (e.g., Mac OS X)")
 
 (add-to-list 'python-shell-extra-pythonpaths "/home/isaac/anaconda3/bin/python")
 
-(exec-path-from-shell-initialize)
-
 (defun set-exec-path-from-shell-PATH ()
         (interactive)
         (let ((path-from-shell (replace-regexp-in-string "^.*\n.*shell\n" "" (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
@@ -1018,5 +1015,13 @@ May be necessary for some GUI environments (e.g., Mac OS X)")
 
 (global-set-key [\M-\S-up] 'move-text-up)
 (global-set-key [\M-\S-down] 'move-text-down)
+
+;; Also works for Java.
+(autoload 'google-set-c-style "google-c-style")
+(autoload 'google-make-newline-indent "google-c-style")
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+(add-hook 'c-mode-hook 'google-set-c-style)
+(add-hook 'java-mode-hook 'google-set-c-style)
 
 (setq warning-minimum-level :emergency)

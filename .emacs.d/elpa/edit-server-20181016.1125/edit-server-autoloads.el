@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "edit-server" "edit-server.el" (23633 5390
-;;;;;;  34517 513000))
+;;;### (autoloads nil "edit-server" "edit-server.el" (23657 39299
+;;;;;;  204324 942000))
 ;;; Generated autoloads from edit-server.el
 
 (autoload 'edit-server-start "edit-server" "\

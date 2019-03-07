@@ -1,0 +1,26 @@
+Loading /home/isaac/.emacs.d/config.el (source)...
+Loading /home/isaac/.emacs.d/custom.el (source)...done
+[yas] Prepared just-in-time loading of snippets successfully. [2 times]
+Created yt link.
+Loading /home/isaac/.emacs.d/config.el (source)...done
+Loaded ~/.emacs.d/config.el
+For information about GNU Emacs and the GNU system, type C-h C-a.
+Loading /home/isaac/.emacs.d/recentf...done
+Cleaning up the recentf list...done (0 removed)
+File mode specification error: (json-readtable-error)
+Org mode fontification error in #<buffer 2019.org> at 21
+(No changes need to be saved)
+executing Ipython code block...
+ob-ipython--dump-error: There was a fatal error trying to process the request. See *ob-ipython-debug*
+(No changes need to be saved) [2 times]
+executing Ipython code block...
+ob-ipython--dump-error: There was a fatal error trying to process the request. See *ob-ipython-debug*
+C-x C-g is undefined
+helm: Error: Trying to run helm within a running helm session
+Wrote /home/isaac/*Messages*
+Quit
+Modified buffers exist; exit anyway? (y or n) y
+Active processes exist; kill them and exit anyway? (y or n) y
+Saving file /home/isaac/.emacs.d/recentf...
+Wrote /home/isaac/.emacs.d/recentf
+Wrote /home/isaac/.emacs.d/ac-comphist.dat

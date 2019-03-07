@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "latex-extra" "latex-extra.el" (23633 5474
-;;;;;;  707668 593000))
+;;;### (autoloads nil "latex-extra" "latex-extra.el" (23657 43144
+;;;;;;  683123 413000))
 ;;; Generated autoloads from latex-extra.el
 
 (autoload 'latex/setup-auto-fill "latex-extra" "\

@@ -4,7 +4,7 @@
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "visual-regexp-steroids" "visual-regexp-steroids.el"
-;;;;;;  (23633 5446 246906 514000))
+;;;;;;  (23657 43133 229399 414000))
 ;;; Generated autoloads from visual-regexp-steroids.el
 
 (autoload 'vr/select-replace "visual-regexp-steroids" "\
@@ -34,8 +34,8 @@ Like isearch-backward, but using Python (or custom) regular expressions.
 
 ;;;***
 
-;;;### (autoloads nil nil ("visual-regexp-steroids-pkg.el") (23633
-;;;;;;  5446 234906 187000))
+;;;### (autoloads nil nil ("visual-regexp-steroids-pkg.el") (23657
+;;;;;;  43133 217393 415000))
 
 ;;;***
 

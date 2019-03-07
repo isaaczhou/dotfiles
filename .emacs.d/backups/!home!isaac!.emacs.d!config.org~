@@ -139,7 +139,7 @@ Here's some configuration for [[https://github.com/bbatsov/solarized-emacs/][bba
 
 #+begin_src emacs-lisp
 (when (window-system)
-    (set-default-font "Fira Code Light 15"))
+    (set-default-font "Fira Code Light 18"))
 #+end_src
 
 * Sane defaults
@@ -813,8 +813,7 @@ Integrates with IPython.
 ** Python Environment
 
 #+begin_src emacs-lisp
-(setenv "WORKON_HOME" "~/anaconda3/envs")
-(pyvenv-mode 1)
+(setenv "WORKON_HOME" "/home/isaac/anaconda3/envs/")
 #+end_src
 
 ** Racket
@@ -1461,11 +1460,6 @@ I want to load snippets in orgmode
 #+end_src
 
 
-** exec-path-from-shell
-
-#+begin_src emacs-lisp
-(exec-path-from-shell-initialize)
-#+end_src
 
 #+begin_src emacs-lisp
 (defun set-exec-path-from-shell-PATH ()
