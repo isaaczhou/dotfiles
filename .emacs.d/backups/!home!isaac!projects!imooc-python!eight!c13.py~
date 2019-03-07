@@ -1,5 +1,0 @@
-def demo():
-    global c
-    c = 2
-
-print(c)    
