@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: java block
+# key: java
+# --
+#+begin_src java :classname cname :results output :exports both
+$0
+#+END_SRC

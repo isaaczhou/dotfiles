@@ -1,0 +1,1 @@
+("~/myprojects/logs/" "~/myprojects/data-structure/" "~/myprojects/primerpy/" "~/.emacs.d/")
